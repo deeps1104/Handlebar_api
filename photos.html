@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script 
+    src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js'>
+    </script>
+</head>
+<body>
+  <div class="page-wrap">
+    <h1 style="margin-left: 25px; text-align: center;">POSTS OF PHOTOS DATA</h1>
+    <div id="pets-container" style="text-align: center;">
+      <a href="/Home.html">find Home Page</a>
+    </div>
+  </div>
+  <section id='renderedContent'></section>
+  <script id='myTemplate' type='text/x-handlebars-template' src="photos.html">
+    <!-- <ul class="people_list"> -->
+      {{#each data}}
+        <li>{{this.id}} </li>
+        <li>{{this.title}} </li>
+        <img src="{{photo}}">
+        <br>
+        <br>
+        <br>
+      {{/each}}
+    <!-- </ul> -->
+  </script>
+  
+  <script src="Home.js"></script>
+</body>
+  <script  src="header.js">
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+<div class="photo-column">
+  <img src="{{photo}}">
+</div>
