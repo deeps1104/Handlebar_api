@@ -6,5 +6,6 @@ function render(d, data) {
   var html = template(data);
 
   // Add the result to the DOM
+  
   d.getElementById('renderedContent').innerHTML = html;
 }
