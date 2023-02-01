@@ -4,21 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TODOS</title>
+  <title>TODO Data</title>
   <script 
     src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js'>
     </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      nav {
+        display: flex;
+        justify-content: space-around;
+      }
+     </style>
 </head>
-<body>
+<body style="background-color: #2a6877;">
+  <div class="container-fluid bg-success text-white" >
+    <nav class="py-3" >
+         <a class="navbar-brand"  href="./posts.html"> Posts </a>
+         <a class="navbar-brand" href="./photos.html"> Photos </a>
+         <a class="navbar-brand" href="./comments.html"> Comments </a>
+         <a class="navbar-brand" href="./albums.html"> Albums </a>
+         <a class="navbar-brand" href="./users.html"> User </a>
+         <a class="navbar-brand" href="./todos.html">Todos</a>
+     </nav>
+ </div>
   <div class="page-wrap">
-    <h1 style="margin-left: 25px; text-align: center;">TODO DATA</h1>
+    <h1 style="margin-left: 25px; text-align: center; color: #fff;">Todo Data</h1>
     <div id="pets-container" style="text-align: center;">
-      <a href="/Home.html">Find Home Page</a>
+      <a href="/Home.html"style="color: #fff;">Click and Find Home Page</a>
     </div>
   </div>
   <section id='renderedContent'></section>
   <script id='myTemplate' type='text/x-handlebars-template' src="todos.html">
-    <ul class="people_list">
+    <!-- <ul class="people_list">
       {{#each data}}
         <li>{{this.id}} </li>
         <li>{{this.title}} </li>
@@ -26,7 +43,17 @@
         <br>
         <br>
       {{/each}}
-    </ul>
+    </ul> -->
+    <div class="container">
+      <div class="row" >
+        {{#each data}}
+        <div class="col"style="color: #fff;">
+<p>{{this.id}}</p>
+<p>{{this.title}}</p>
+<hr style=" border-top: 2px solid #fff;">
+      {{/each}}
+      </div>
+    </div>
   </script>
   
   <script src="renderer.js"></script>
