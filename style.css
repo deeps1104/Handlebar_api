@@ -65,7 +65,7 @@ a {
   text-decoration: none;
   font-size: 20px;
   padding-left: 40px;
-  color: white;
+  color: black;
 }
  
 .sidebar a.active {
@@ -75,5 +75,5 @@ a {
 
 .sidebar a:hover:not(.active) {
   color: #000;
-  background-color: #F1F6F5;
+  background-color: #9EA1D4;
 }

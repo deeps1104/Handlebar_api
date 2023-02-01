@@ -18,24 +18,27 @@
   </div>
   <section id='renderedContent'></section>
   <script id='myTemplate' type='text/x-handlebars-template' src="1.html">
-    <!-- <div class="card mx-5 border border-primary">
-      <ul class="list-group list-group-flush" >
-        {{#each data}}
-        <li class="list-group-item"> {{this.id}}</li>
-        <li class="list-group-item">{{this.title}} </li>
-        <li class="list-group-item">{{this.body}} </li>
-        {{/each}}
-      </ul>
-    </div> -->
+    <!-- {{#data1}} 
+    {{@key}}{{this.id}} 
+    <br>
+    {{@key}}{{this.title}} 
+    <br>
+    {{@key}}{{this.body}} 
+    <br>
+    {{/data1}} -->
+
     <div class="container card">
-      {{#each data}}
-      <div class="card-header bg-primary text-white">{{this.id}}</div>
-      <div class="container card-body ">{{this.title}}</div> 
-      <div class="container card-header">{{this.body}}</div>
-      {{/each}}
+      {{#data1}}
+      <div class="card-header bg-primary text-white">{{@key}}id:{{this.id}} 
+      </div>
+      <div class="container card-body ">{{@key}}{{this.title}} 
+      </div> 
+      <div class="container card-header">{{@key}}{{this.body}} 
+      </div>
+      {{/data1}}
     </div>
   </script>
-  <script src="client.js">
+  <script src="client2.js">
   </script>
   <script src="renderer.js" ></script>
 </body>
